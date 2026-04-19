@@ -47,3 +47,24 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 🐛 **Defect Management:** Identified, documented, and reported critical integration bugs using **Jira**, ensuring clear reproduction steps for the development team.
 
 📊 **Results Documentation:** Organized all testing artifacts and outcomes to provide a transparent overview of the system's stability before production.
+
+## 📑 Test Planning & Strategy
+
+<table width="100%">
+<tr>
+<td width="30%"><b>🎯 Scope</b></td>
+<td>Functional testing of the <b>Urban.Grocers API</b>, focusing on Warehouse (SOAP), Kits, Products, and Courier (REST) modules.</td>
+</tr>
+<tr>
+<td><b>🚫 Out of Scope</b></td>
+<td>Frontend/UI testing, automated test scripts (scripts/code), and performance/load testing.</td>
+</tr>
+<tr>
+<td><b>✅ Entry Criteria</b></td>
+<td>Access to the <b>Apidoc</b> documentation, active server environment (TripleTen container), and functional requirements finalized.</td>
+</tr>
+<tr>
+<td><b>🏁 Exit Criteria</b></td>
+<td>100% of designed checklists executed, all identified bugs reported in <b>Jira</b>, and final status report completed.</td>
+</tr>
+</table>
