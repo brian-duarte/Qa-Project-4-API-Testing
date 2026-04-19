@@ -72,7 +72,7 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 ## 📊 Test Execution Metrics
 
 <details>
-  <summary><b><i>Click here to view Design Checklist details</i></b></summary>
+  <summary><b><i>Click here to view Design Checklist Functional Validation: Main.Kits - Add Products to Kit details</i></b></summary>
 
   #### 📝 Design Checklist
  | Category | Results |
@@ -83,7 +83,7 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
   | 🚨 Critical/High Severity Defects| `6` |
 
 ## 📂 Project Documentation
-[Platform Design-Checklist](https://docs.google.com/spreadsheets/d/1wQ4V7dnGUI24XoK_e8gDvZ0PdoJxq9p6GwnVnX_lvcY/edit?usp=sharing)
+[Functional Validation: Main.Kits_Add Products to Kit-Checklist](https://docs.google.com/spreadsheets/d/1wQ4V7dnGUI24XoK_e8gDvZ0PdoJxq9p6GwnVnX_lvcY/edit?usp=sharing)
 
 <div align="center">
   <img src="" alt="" width="90%">
