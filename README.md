@@ -68,3 +68,26 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 <td>100% of designed checklists executed, all identified bugs reported in <b>Jira</b>, and final status report completed.</td>
 </tr>
 </table>
+
+## 📊 Test Execution Metrics
+
+<details>
+  <summary><b><i>Click here to view Design Checklist details</i></b></summary>
+
+  #### 📝 Design Checklist
+ | Category | Results |
+  | :--- | :---: |
+  | 🚀 **Total Tests Executed** | `52` |
+  | ✅ Passed Cases | `33` |
+  | 🐞 Failed Cases (Bugs Found) | `19` |
+  | 🚨 Critical/High Severity Defects| `6` |
+
+## 📂 Project Documentation
+[Platform Design-Checklist](https://docs.google.com/spreadsheets/d/1wQ4V7dnGUI24XoK_e8gDvZ0PdoJxq9p6GwnVnX_lvcY/edit?usp=sharing)
+
+<div align="center">
+  <img src="" alt="" width="90%">
+  <p><i></i></p>
+</div>
+
+</details>
