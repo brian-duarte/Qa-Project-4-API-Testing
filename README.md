@@ -31,3 +31,19 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 
 > **Note:** The full documentation is integrated within the project container. I have included an export of the Postman collection with request examples in the `/docs` folder.
 </details>
+
+---
+
+## ✅ Activities Performed
+
+🔍 **Requirement Analysis:** Thorough review of the **Urban.Grocers** back-end documentation **(Apidoc)** to identify business rules and technical constraints.
+
+📝 **Test Design & Strategy:** Developed comprehensive **Checklists** and test cases using Google Sheets, applying **Black Box techniques** to ensure full functional coverage.
+
+🚀 **Postman Collection Engineering:** Structured and configured API request collections, including environment variables and dynamic parameters for efficient testing.
+
+🧪 **API Testing Execution:** Conducted manual and functional testing of **REST and SOAP** endpoints to validate data integrity and system response.
+
+🐛 **Defect Management:** Identified, documented, and reported critical integration bugs using **Jira**, ensuring clear reproduction steps for the development team.
+
+📊 **Results Documentation:** Organized all testing artifacts and outcomes to provide a transparent overview of the system's stability before production.
