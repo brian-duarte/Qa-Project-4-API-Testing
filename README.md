@@ -127,57 +127,60 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 
 
 <details>
-  <summary><b><i>Click here to view 🐞 Featured Bug Report - Product Count, Weight, & DeliveryCost details</i></b></summary>
+  <summary><b><i>🐞 Click here to view Bug Report: Critical Logic Error in Delivery Costs details</i></b></summary>
 
-##
+  ## 🐛 [ID: PROYEC-32] – Critical Input Validation Failure & Cost Calculation Error
 
-🐛 **[ID:PROYEC-22 / PROYEC-23 / PROYEC-35]** – **Error en validación de productsCount & productsWeight**
-* **Severidad:** 🛑 Crítica (Afecta el cálculo de costos y la lógica de negocio).
-* **Priority:** High ⬆️
-* **Descripción:** El sistema procesa valores de entrada inválidos (ej. cantidades negativas o tipos de datos no numéricos) sin detener la solicitud, retornando un 200 OK.
+* **Severity:** 🛑 **Critical** (Direct impact on profitability and business logic failure).
+* **Priority:** **High** ⬆️
+* **Component:** `Order and Go` Service API.
 
-* **Pasos para reproducir:**
+### 📝 Description
+The endpoint `/order-and-go/v1/delivery` fails to sanitize and validate input parameters. It accepts invalid negative values and returns a `200 OK` status, leading to incorrect **delivery cost calculations** and a direct violation of established business rules.
 
-Enviar una petición POST a /order-and-go/v1/delivery.
+### 🎬 Evidence & Technical Analysis
+The following video demonstrates how the system processes a payload that violates two core constraints: **Negative product quantity** and **Weight threshold inconsistency**.
 
-Incluir:
-"deliveryTime": 8,
-    "productsCount": -1,
-    "productsWeight": 3
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/5d4f0b95-7ea6-435f-8eb3-65e2ed83fac7" width="75%"></video>
+  <p><b>🎥 Execution: Negative Value Testing & Cost Validation</b></p>
+</div>
 
-* **Resultado esperado:** El servidor debe rechazar la solicitud con un código 400 Bad Request.
+> **Key takeaway from video:** Note that when sending `"productsCount": -1`, the system ignores the invalid integer, responds with `200 OK`, and sets `clientDeliveryCost` to `0`, bypassing the required minimum cost.
 
-* **Resultado actual:** El sistema responde 200 OK y calcula costos erróneos.
-  
-    "name": "Order and Go",
-  
-    "isItPossibleToDeliver": true,
-  
-    "hostDeliveryCost": 3,
-  
-    "toBeDeliveredTime": {
-  
-        "min": 20,
-  
-        "max": 25
-  
-    },
-  
-    "clientDeliveryCost": 0
-  
+---
 
-* Evidence:
+### 🛠️ Bug Details (Expected vs. Actual)
+
+| Field | Input Data (Payload) | Expected Result | Actual Result |
+| :--- | :--- | :--- | :--- |
+| **Products Count** | `-1` | `400 Bad Request` | `200 OK` (Accepted) |
+| **Delivery Cost** | Weight: `3 kg` | `ClientDeliveryCost: 3` | `ClientDeliveryCost: 0` |
+
+**Steps to Reproduce:**
+1. Send a `POST` request to `/order-and-go/v1/delivery`.
+2. Use the following payload:
+   ```json
+   {
+     "deliveryTime": 8,
+     "productsCount": -1,
+     "productsWeight": 3
+   }
+
+3. Check the HTTP response code and the cost fields in the JSON body.
+
+**Defect Impact:**
+* **Financial:** Direct revenue loss per order due to underestimated service costs ($0 instead of $3) and acceptance of negative counts.
+* **Data Integrity:** Risk of database corruption by allowing records with impossible product quantities (negative values).
 
 
-
-
-* Environment:
+### 💻 Testing Environment.
+* **Tools:** Postman.
+* **OS:** Linux Mint.
 
  
 </div>
 </details>
-
-
 
 
 
