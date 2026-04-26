@@ -129,25 +129,49 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 <details>
   <summary><b><i>Click here to view 🐞 Featured Bug Report - Product Count, Weight, & DeliveryCost details</i></b></summary>
 
-🐛 [PROYEC-31] – Error en validación de productsCount
-Severidad: Crítica (Afecta el cálculo de costos y la lógica de negocio).
+##
 
-Descripción: El sistema procesa valores de entrada inválidos (ej. cantidades negativas o tipos de datos no numéricos) sin detener la solicitud, retornando un 200 OK.
+🐛 **[ID:PROYEC-22 / PROYEC-23 / PROYEC-35]** – **Error en validación de productsCount & productsWeight**
+* **Severidad:** 🛑 Crítica (Afecta el cálculo de costos y la lógica de negocio).
+* **Priority:** High ⬆️
+* **Descripción:** El sistema procesa valores de entrada inválidos (ej. cantidades negativas o tipos de datos no numéricos) sin detener la solicitud, retornando un 200 OK.
 
-Pasos para reproducir:
+* **Pasos para reproducir:**
 
 Enviar una petición POST a /order-and-go/v1/delivery.
 
-Incluir productsCount: -1.
+Incluir:
+"deliveryTime": 8,
+    "productsCount": -1,
+    "productsWeight": 3
 
-Resultado esperado: El servidor debe rechazar la solicitud con un código 400 Bad Request.
+* **Resultado esperado:** El servidor debe rechazar la solicitud con un código 400 Bad Request.
 
-Resultado actual: El sistema responde 200 OK y calcula costos erróneos.
+* **Resultado actual:** El sistema responde 200 OK y calcula costos erróneos.
+  
+    "name": "Order and Go",
+  
+    "isItPossibleToDeliver": true,
+  
+    "hostDeliveryCost": 3,
+  
+    "toBeDeliveredTime": {
+  
+        "min": 20,
+  
+        "max": 25
+  
+    },
+  
+    "clientDeliveryCost": 0
+  
 
-[Video de evidencia] (Aquí insertas el video que comprimiste con FFmpeg)
+* Evidence:
 
-Link al ticket completo en Jira: PROYEC-31
 
+
+
+* Environment:
 
  
 </div>
