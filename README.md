@@ -183,8 +183,19 @@ The following video demonstrates how the system processes a payload that violate
 </details>
 
 
+---
 
+### ⚠️ Issues Identified
 
-
-
+<div style="background-color: #fff5f5; border-left: 5px solid #ff4444; padding: 15px; color: #333;">
+  <ul>
+    <li>Critical Validation Gap.</li>
+    <li>Business Logic Inconsistency.</li>
+    <li>Boundary Value Vulnerabilities.</li>
+    <li>Data Integrity Risk.</li>
+    <li>False Positive Responses.</li>
+  </ul>
+  <hr>
+  </p>
+</div>
 
