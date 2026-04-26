@@ -74,7 +74,11 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 <details>
   <summary><b><i>Click here to view Design Checklist Functional Validation: Main.Kits - Add Products to Kit details</i></b></summary>
 
-  #### 📝 Design Checklist
+  ##
+   > **Project Overview:** Validation of the `/api/v1/kits/:id/products` endpoint.
+
+#### 📝 Design Checklist
+
  | Category | Results |
   | :--- | :---: |
   | 🚀 **Total Tests Executed** | `52` |
@@ -92,6 +96,62 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 
 </details>
 
+<details>
+  <summary><b><i>Click here to view Delivery Service details</i></b></summary>
+
+ #### 🚚 Delivery Service - Test Execution Summary
+ > **Project Overview:** Validation of the `/order-and-go/v1/delivery` endpoint using Boundary Value Analysis and Equivalence Partitioning.
+ 
+| Category | Results |
+  | :--- | :---: |
+  | 🚀 **Total Tests Executed** | `57` |
+  | ✅ Passed Cases | `42` |
+  | 🐞 Failed Cases (Bugs Found) | `15` |
+  | 🚨 Critical/High Severity Defects| `13` |
+
+## 📂 Project Documentation
+
+[Delivery Service -Checklist](https://docs.google.com/spreadsheets/d/19wM9g8drlzGF2JIr4nNHSdY3BCet-pzQwzVBMoZ9ngs/edit?usp=sharing)
+
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/4a737380-cc29-4bc2-8ae3-5c5b05baefa2" width="90%"></video>
+  <p><b><i>🎥 Logic Error: Invalid Delivery Times returning 200 OK .</i></b></p>
+</div>
+
+ 
+</div>
+</details>
+
+
+
+
+<details>
+  <summary><b><i>Click here to view 🐞 Featured Bug Report - Product Count, Weight, & DeliveryCost details</i></b></summary>
+
+🐛 [PROYEC-31] – Error en validación de productsCount
+Severidad: Crítica (Afecta el cálculo de costos y la lógica de negocio).
+
+Descripción: El sistema procesa valores de entrada inválidos (ej. cantidades negativas o tipos de datos no numéricos) sin detener la solicitud, retornando un 200 OK.
+
+Pasos para reproducir:
+
+Enviar una petición POST a /order-and-go/v1/delivery.
+
+Incluir productsCount: -1.
+
+Resultado esperado: El servidor debe rechazar la solicitud con un código 400 Bad Request.
+
+Resultado actual: El sistema responde 200 OK y calcula costos erróneos.
+
+[Video de evidencia] (Aquí insertas el video que comprimiste con FFmpeg)
+
+Link al ticket completo en Jira: PROYEC-31
+
+
+ 
+</div>
+</details>
 
 
 
