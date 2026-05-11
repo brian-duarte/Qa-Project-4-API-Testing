@@ -1,4 +1,4 @@
-# Qa-Project-4-API-Testing
+# API-Testing-Urban-Grocers
 <p align="left">
   <img src="assets/images/API.png" alt="web application Welcome Screenshot" width="800">
 </p>
