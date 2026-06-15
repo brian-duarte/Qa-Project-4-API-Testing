@@ -126,9 +126,9 @@ API testing on Urban.Grocers backend services, validating REST endpoints, HTTP r
 
 
 
-  <summary><b><i>🐞 Click here to view Bug Report: Critical Logic Error in Delivery Costs details</i></b></summary>
+ ## 🐞 Bug Report: Critical Logic Error in Delivery Costs details
 
-  ## 🐛 [ID: PROYEC-32] – Critical Input Validation Failure & Cost Calculation Error
+  ### 🐛 [ID: PROYEC-32] – Critical Input Validation Failure & Cost Calculation Error
 
 * **Severity:** 🛑 **Critical** (Direct impact on profitability and business logic failure).
 * **Priority:** **High** ⬆️
